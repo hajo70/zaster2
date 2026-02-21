@@ -1,0 +1,14 @@
+= zaster2
+Collection of tools to import transaction data from crypto exchanges or blockchains
+
+== Setup database
+
+----
+sudo mysql -u root
+CREATE DATABASE zaster2;
+SHOW DATABASES;
+
+GRANT ALL PRIVILEGES ON zaster2.* TO 'bot'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR bot@localhost;
+----
