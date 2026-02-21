@@ -1,8 +1,8 @@
 package de.spricom.zaster2.utils;
 
 import lombok.extern.log4j.Log4j2;
+import org.springframework.boot.EnvironmentPostProcessor;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.env.EnvironmentPostProcessor;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 @Log4j2

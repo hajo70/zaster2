@@ -1,2 +1,2 @@
-org.springframework.boot.env.EnvironmentPostProcessor=\
+org.springframework.boot.EnvironmentPostProcessor=\
 de.spricom.zaster2.utils.EncryptionPropertyEnvironmentPostProcessor
