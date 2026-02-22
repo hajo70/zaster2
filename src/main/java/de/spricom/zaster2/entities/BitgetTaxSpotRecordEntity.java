@@ -13,25 +13,26 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "bitget_tax_future_record")
+@Table(name = "bitget_tax_spot_record")
 @Getter
 @Setter
 @ToString
-public class BitgetTaxFutureRecordEntity {
+public class BitgetTaxSpotRecordEntity {
     @Id
     private Long id;
     @Column(length = 12)
-    private String symbol;
-    @Column(length = 6)
-    private String marginCoin;
+    private String coin;
     @Column(length = 64)
-    private String futureTaxType;
+    private String spotTaxType;
     @Column(precision = 16, scale = 10)
     private BigDecimal amount;
     @Column(precision = 16, scale = 10)
     private BigDecimal fee;
+    @Column(precision = 16, scale = 10)
+    private BigDecimal balance;
     @Column(columnDefinition = "DATETIME(0)", nullable = false)
     private LocalDateTime ts;
+    private Long bizOrderId;
 
     public int hashCode() {
         return id != null ? id.hashCode() : super.hashCode();
@@ -43,7 +44,7 @@ public class BitgetTaxFutureRecordEntity {
             return false;
         }
 
-        BitgetTaxFutureRecordEntity that = (BitgetTaxFutureRecordEntity) other;
+        BitgetTaxSpotRecordEntity that = (BitgetTaxSpotRecordEntity) other;
         if (id != null) {
             return id.equals(that.id);
         }

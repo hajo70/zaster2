@@ -1,11 +1,13 @@
 package de.spricom.zaster2.tool;
 
 import com.bitget.openapi.dto.response.ResponseResult;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import de.spricom.zaster2.bitget.BitgetApi;
 import de.spricom.zaster2.entities.BitgetTaxFutureRecordEntity;
+import de.spricom.zaster2.entities.BitgetTaxSpotRecordEntity;
 import de.spricom.zaster2.mapper.BitgetTaxFutureRecordMapper;
+import de.spricom.zaster2.mapper.BitgetTaxSpotRecordMapper;
 import de.spricom.zaster2.repository.BitgetTaxFutureRecordRepository;
+import de.spricom.zaster2.repository.BitgetTaxSpotRecordRepository;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,13 +30,16 @@ public class BitgetTaxDataImporter {
     private BitgetApi api;
 
     @Autowired
-    private BitgetTaxFutureRecordRepository repository;
+    private BitgetTaxFutureRecordRepository futureRepository;
 
     @Autowired
-    private ObjectMapper mapper;
+    private BitgetTaxSpotRecordRepository spotRepository;
 
     @Autowired
-    private BitgetTaxFutureRecordMapper recordMapper;
+    private BitgetTaxFutureRecordMapper futureMapper;
+
+    @Autowired
+    private BitgetTaxSpotRecordMapper spotMapper;
 
     @Test
     void importCurrentTaxFutureRecords() throws IOException {
@@ -53,6 +58,23 @@ public class BitgetTaxDataImporter {
         }
     }
 
+    @Test
+    void importCurrentTaxSpotRecords() throws IOException {
+        ResponseResult<List> result = api.taxSpotRecord(Instant.now().minus(30, ChronoUnit.DAYS), Instant.now());
+        saveTaxSpotRecords(result);
+    }
+
+    @Test
+    void importHistoricTaxSpotRecords() throws IOException, InterruptedException {
+        Instant limit = Instant.now();
+        while (!isLimitReached(limit)) {
+            limit = previous(limit);
+            ResponseResult<List> result = api.taxSpotRecord(limit.minus(30, ChronoUnit.DAYS), limit);
+            saveTaxSpotRecords(result);
+            TimeUnit.SECONDS.sleep(1);
+        }
+    }
+
     private Instant previous(Instant last) {
         return last.minus(30, ChronoUnit.DAYS).plus(5, ChronoUnit.MINUTES);
     }
@@ -64,8 +86,17 @@ public class BitgetTaxDataImporter {
     private void saveTaxFutureRecords(ResponseResult<List> result) {
         for (Object json : result.getData()) {
             Map<String, String> data = (Map<String, String>) json;
-            BitgetTaxFutureRecordEntity entity = recordMapper.toEntity(data);
-            BitgetTaxFutureRecordEntity saved = repository.save(entity);
+            BitgetTaxFutureRecordEntity entity = futureMapper.toEntity(data);
+            BitgetTaxFutureRecordEntity saved = futureRepository.save(entity);
+            log.info("saved {}", saved);
+        }
+    }
+
+    private void saveTaxSpotRecords(ResponseResult<List> result) {
+        for (Object json : result.getData()) {
+            Map<String, String> data = (Map<String, String>) json;
+            BitgetTaxSpotRecordEntity entity = spotMapper.toEntity(data);
+            BitgetTaxSpotRecordEntity saved = spotRepository.save(entity);
             log.info("saved {}", saved);
         }
     }
