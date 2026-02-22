@@ -1,0 +1,1088 @@
+{
+  "code": "00000",
+  "data": [
+    {
+      "id": "1399350927059226624",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.030016296",
+      "ts": "1769357180369"
+    },
+    {
+      "id": "1399350927059226634",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.140047704",
+      "ts": "1769357180370"
+    },
+    {
+      "id": "1399351259390709773",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.24528",
+      "fee": "-0.02871792",
+      "ts": "1769357259604"
+    },
+    {
+      "id": "1399351259390709778",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-1.21472",
+      "fee": "-0.14222208",
+      "ts": "1769357259604"
+    },
+    {
+      "id": "1399375299379630080",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-11.73028277",
+      "fee": "0",
+      "ts": "1769362991184"
+    },
+    {
+      "id": "1399375544423452672",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-8.34847009",
+      "fee": "0",
+      "ts": "1769363049607"
+    },
+    {
+      "id": "1399392380103856129",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-8.87567642",
+      "fee": "0",
+      "ts": "1769367063546"
+    },
+    {
+      "id": "1399392836993585152",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-9.2775374",
+      "fee": "0",
+      "ts": "1769367172477"
+    },
+    {
+      "id": "1399393085552234496",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5.9345871",
+      "fee": "0",
+      "ts": "1769367231738"
+    },
+    {
+      "id": "1399429598210068480",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-4.67088206",
+      "fee": "0",
+      "ts": "1769375937034"
+    },
+    {
+      "id": "1399982735719305217",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5.07410449",
+      "fee": "0",
+      "ts": "1769507815293"
+    },
+    {
+      "id": "1400828749338546231",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-13.09",
+      "fee": "0",
+      "ts": "1769709520658"
+    },
+    {
+      "id": "1400829931373105152",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5.15033881",
+      "fee": "0",
+      "ts": "1769709802477"
+    },
+    {
+      "id": "1400864158449831936",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-7.72050641",
+      "fee": "0",
+      "ts": "1769717962848"
+    },
+    {
+      "id": "1401500192317542414",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.003113166",
+      "ts": "1769869605139"
+    },
+    {
+      "id": "1401500192317542423",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.035007234",
+      "ts": "1769869605139"
+    },
+    {
+      "id": "1401500205688983559",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.034901856",
+      "ts": "1769869608327"
+    },
+    {
+      "id": "1401500205688983563",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.103050144",
+      "ts": "1769869608327"
+    },
+    {
+      "id": "1401500221908357270",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.04725",
+      "fee": "-0.0111468",
+      "ts": "1769869612194"
+    },
+    {
+      "id": "1401500221912551424",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.01596",
+      "fee": "-0.003631014",
+      "ts": "1769869612195"
+    },
+    {
+      "id": "1401500221912551434",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.01653",
+      "fee": "-0.003631356",
+      "ts": "1769869612195"
+    },
+    {
+      "id": "1401500221912551443",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.0217",
+      "fee": "-0.0044604",
+      "ts": "1769869612195"
+    },
+    {
+      "id": "1401500221912551449",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.00651",
+      "fee": "-0.00133812",
+      "ts": "1769869612195"
+    },
+    {
+      "id": "1401500221916745735",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.0682",
+      "fee": "-0.0140184",
+      "ts": "1769869612196"
+    },
+    {
+      "id": "1401500223246340106",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-1.24354",
+      "fee": "-0.089173356",
+      "ts": "1769869612513"
+    },
+    {
+      "id": "1401500223250534402",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.71082",
+      "fee": "-0.04995126",
+      "ts": "1769869612514"
+    },
+    {
+      "id": "1401506229267369984",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_from_strategy",
+      "amount": "19.19791793",
+      "fee": "0",
+      "ts": "1769871044460"
+    },
+    {
+      "id": "1401506381247975425",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-6",
+      "fee": "0",
+      "ts": "1769871080695"
+    },
+    {
+      "id": "1401541713087598592",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.06317874",
+      "ts": "1769879504462"
+    },
+    {
+      "id": "1401541713087598595",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.071094906",
+      "ts": "1769879504462"
+    },
+    {
+      "id": "1401541714014539779",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.036432",
+      "ts": "1769879504683"
+    },
+    {
+      "id": "1401541778908811359",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0.396",
+      "fee": "-0.0361944",
+      "ts": "1769879520155"
+    },
+    {
+      "id": "1401541788731871238",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "2.30941",
+      "fee": "-0.132888",
+      "ts": "1769879522497"
+    },
+    {
+      "id": "1401541853139603459",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.03582",
+      "ts": "1769879537853"
+    },
+    {
+      "id": "1401541859024211982",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.13116",
+      "ts": "1769879539256"
+    },
+    {
+      "id": "1401541900409409586",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0.066",
+      "fee": "-0.0357804",
+      "ts": "1769879549123"
+    },
+    {
+      "id": "1401541905669066760",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.87232",
+      "fee": "-0.099155712",
+      "ts": "1769879550377"
+    },
+    {
+      "id": "1401541905669066770",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.28768",
+      "fee": "-0.032700288",
+      "ts": "1769879550377"
+    },
+    {
+      "id": "1401544354505068546",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-13.09",
+      "fee": "0",
+      "ts": "1769880134225"
+    },
+    {
+      "id": "1401555231958536192",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-14.12",
+      "fee": "0",
+      "ts": "1769882727612"
+    },
+    {
+      "id": "1401564810062762082",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0352728",
+      "ts": "1769885011210"
+    },
+    {
+      "id": "1401564820351389705",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.00255648",
+      "ts": "1769885013663"
+    },
+    {
+      "id": "1401564820355584000",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0031956",
+      "ts": "1769885013664"
+    },
+    {
+      "id": "1401564820355584003",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.003642984",
+      "ts": "1769885013664"
+    },
+    {
+      "id": "1401564820355584008",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.118417818",
+      "ts": "1769885013664"
+    },
+    {
+      "id": "1401564865486295048",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0.288",
+      "fee": "-0.0351",
+      "ts": "1769885024424"
+    },
+    {
+      "id": "1401564868518776836",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.31317599",
+      "fee": "-0.087484104",
+      "ts": "1769885025147"
+    },
+    {
+      "id": "1401564868518776844",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.14535401",
+      "fee": "-0.040603896",
+      "ts": "1769885025147"
+    },
+    {
+      "id": "1401564910042386434",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0300252",
+      "ts": "1769885035047"
+    },
+    {
+      "id": "1401564910042386441",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.004353888",
+      "ts": "1769885035047"
+    },
+    {
+      "id": "1401564912177287170",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.090558",
+      "ts": "1769885035556"
+    },
+    {
+      "id": "1401564915872468995",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0062496",
+      "ts": "1769885036437"
+    },
+    {
+      "id": "1401564915872469005",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.00956097",
+      "ts": "1769885036437"
+    },
+    {
+      "id": "1401564915872469012",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.10917003",
+      "ts": "1769885036437"
+    },
+    {
+      "id": "1401564926005907460",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.0315200004",
+      "fee": "-0.034398",
+      "ts": "1769885038853"
+    },
+    {
+      "id": "1401564937057898502",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0341784",
+      "ts": "1769885041488"
+    },
+    {
+      "id": "1401564940883103754",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.33",
+      "fee": "-0.0343764",
+      "ts": "1769885042400"
+    },
+    {
+      "id": "1401564945995960320",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.0190000002",
+      "fee": "-0.124992",
+      "ts": "1769885043619"
+    },
+    {
+      "id": "1401564946222452872",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.0075",
+      "fee": "-0.00091008",
+      "ts": "1769885043673"
+    },
+    {
+      "id": "1401564946222453029",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.0152",
+      "fee": "-0.00182028",
+      "ts": "1769885043673"
+    },
+    {
+      "id": "1401564946222453153",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.7372",
+      "fee": "-0.08828358",
+      "ts": "1769885043673"
+    },
+    {
+      "id": "1401581403903791104",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-4.55012394",
+      "fee": "0",
+      "ts": "1769888967490"
+    },
+    {
+      "id": "1401585292237508608",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-11.19530991",
+      "fee": "0",
+      "ts": "1769889894541"
+    },
+    {
+      "id": "1401781383469895683",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_from_strategy",
+      "amount": "25.38448862",
+      "fee": "0",
+      "ts": "1769936646334"
+    },
+    {
+      "id": "1402108161069584384",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-7.09040232",
+      "fee": "0",
+      "ts": "1770014556185"
+    },
+    {
+      "id": "1403078216649445376",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5.3526693",
+      "fee": "0",
+      "ts": "1770245835458"
+    },
+    {
+      "id": "1403251812592160792",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5.3526693",
+      "fee": "0",
+      "ts": "1770287223956"
+    },
+    {
+      "id": "1403326464412782602",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0335268",
+      "ts": "1770305022337"
+    },
+    {
+      "id": "1403326577990340609",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.27",
+      "fee": "-0.0336888",
+      "ts": "1770305049416"
+    },
+    {
+      "id": "1403404996245622789",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5",
+      "fee": "0",
+      "ts": "1770323745785"
+    },
+    {
+      "id": "1403459806110060544",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.02878272",
+      "ts": "1770336813475"
+    },
+    {
+      "id": "1403459806110060550",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.07219212",
+      "ts": "1770336813475"
+    },
+    {
+      "id": "1403459949655920666",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0298836",
+      "ts": "1770336847699"
+    },
+    {
+      "id": "1403459970212204556",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.336",
+      "fee": "-0.0300852",
+      "ts": "1770336852600"
+    },
+    {
+      "id": "1403459971327889487",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "1.0114",
+      "fee": "-0.100368",
+      "ts": "1770336852866"
+    },
+    {
+      "id": "1403459989145292806",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0298476",
+      "ts": "1770336857114"
+    },
+    {
+      "id": "1403460012981522437",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.3",
+      "fee": "-0.0300276",
+      "ts": "1770336862797"
+    },
+    {
+      "id": "1403460089317855239",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.001521294",
+      "ts": "1770336880997"
+    },
+    {
+      "id": "1403460089317855245",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.002748144",
+      "ts": "1770336880997"
+    },
+    {
+      "id": "1403460089322049537",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.00122655",
+      "ts": "1770336880998"
+    },
+    {
+      "id": "1403460089322049542",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.092617728",
+      "ts": "1770336880998"
+    },
+    {
+      "id": "1403460091192709133",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0294012",
+      "ts": "1770336881444"
+    },
+    {
+      "id": "1403460113791619073",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.324",
+      "fee": "-0.0295956",
+      "ts": "1770336886832"
+    },
+    {
+      "id": "1403460115528060931",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0.0228599998",
+      "fee": "-0.0981",
+      "ts": "1770336887246"
+    },
+    {
+      "id": "1403461063084249092",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.097944",
+      "ts": "1770337113161"
+    },
+    {
+      "id": "1403461079374925857",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0296208",
+      "ts": "1770337117045"
+    },
+    {
+      "id": "1403461119254368387",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.186",
+      "fee": "-0.0297324",
+      "ts": "1770337126553"
+    },
+    {
+      "id": "1403461128230178822",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.6",
+      "fee": "-0.098304",
+      "ts": "1770337128693"
+    },
+    {
+      "id": "1403461381251567635",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.0288612",
+      "ts": "1770337189018"
+    },
+    {
+      "id": "1403461387756933146",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.095532",
+      "ts": "1770337190569"
+    },
+    {
+      "id": "1403461389287854090",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.067332",
+      "ts": "1770337190934"
+    },
+    {
+      "id": "1403461391288537098",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.36",
+      "fee": "-0.0290772",
+      "ts": "1770337191411"
+    },
+    {
+      "id": "1403461399417098244",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.53",
+      "fee": "-0.06765",
+      "ts": "1770337193349"
+    },
+    {
+      "id": "1403461400251764743",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-1.14",
+      "fee": "-0.096216",
+      "ts": "1770337193548"
+    },
+    {
+      "id": "1403461515548987393",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.094956",
+      "ts": "1770337221037"
+    },
+    {
+      "id": "1403461522423451653",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.6",
+      "fee": "-0.095316",
+      "ts": "1770337222676"
+    },
+    {
+      "id": "1403925466166497280",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5.3526693",
+      "fee": "0",
+      "ts": "1770447835484"
+    },
+    {
+      "id": "1404686848713461760",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-5.3526693",
+      "fee": "0",
+      "ts": "1770629363229"
+    },
+    {
+      "id": "1405482404687810561",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0",
+      "fee": "-0.111648",
+      "ts": "1770819038554"
+    },
+    {
+      "id": "1405482409792278529",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0",
+      "fee": "-0.084522",
+      "ts": "1770819039771"
+    },
+    {
+      "id": "1405482509700599808",
+      "symbol": "XRPUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "-0.87",
+      "fee": "-0.084",
+      "ts": "1770819063591"
+    },
+    {
+      "id": "1405482566063656966",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "-0.01953",
+      "fee": "-0.001718826",
+      "ts": "1770819077029"
+    },
+    {
+      "id": "1405482566067851266",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "-0.02079",
+      "fee": "-0.001829718",
+      "ts": "1770819077030"
+    },
+    {
+      "id": "1405482566067851271",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "-0.05733",
+      "fee": "-0.005045586",
+      "ts": "1770819077030"
+    },
+    {
+      "id": "1405482566067851277",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "-0.04284",
+      "fee": "-0.003770328",
+      "ts": "1770819077030"
+    },
+    {
+      "id": "1405482566067851282",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "-0.04352",
+      "fee": "-0.00376992",
+      "ts": "1770819077030"
+    },
+    {
+      "id": "1405482566072045570",
+      "symbol": "SUIUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "-1.09376",
+      "fee": "-0.09474696",
+      "ts": "1770819077031"
+    },
+    {
+      "id": "1405514782718201856",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-10",
+      "fee": "0",
+      "ts": "1770826758078"
+    },
+    {
+      "id": "1405516092997799936",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-10",
+      "fee": "0",
+      "ts": "1770827070472"
+    },
+    {
+      "id": "1406665415353602048",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-25.2950182",
+      "fee": "0",
+      "ts": "1771101090276"
+    },
+    {
+      "id": "1406666120512573443",
+      "symbol": "",
+      "marginCoin": "USDT",
+      "futureTaxType": "trans_to_strategy",
+      "amount": "-9.53270661",
+      "fee": "0",
+      "ts": "1771101258399"
+    },
+    {
+      "id": "1406674236268515329",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0",
+      "fee": "-0.0399132",
+      "ts": "1771103193346"
+    },
+    {
+      "id": "1406674742932049924",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0.01539",
+      "fee": "-0.003800988",
+      "ts": "1771103314144"
+    },
+    {
+      "id": "1406674742936244230",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0.14661",
+      "fee": "-0.036209412",
+      "ts": "1771103314145"
+    },
+    {
+      "id": "1406985992077479945",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0",
+      "fee": "-0.037404",
+      "ts": "1771177521723"
+    },
+    {
+      "id": "1406986020720381961",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.00504",
+      "fee": "-0.000875784",
+      "ts": "1771177528552"
+    },
+    {
+      "id": "1406986020724576257",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.05809",
+      "fee": "-0.009822234",
+      "ts": "1771177528553"
+    },
+    {
+      "id": "1406986020724576262",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "-0.15873",
+      "fee": "-0.026839098",
+      "ts": "1771177528553"
+    },
+    {
+      "id": "1408756690940760070",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "buy_deal",
+      "amount": "0",
+      "fee": "-0.035856",
+      "ts": "1771599689230"
+    },
+    {
+      "id": "1408756967873875974",
+      "symbol": "DOGEUSDT",
+      "marginCoin": "USDT",
+      "futureTaxType": "sell_deal",
+      "amount": "0.126",
+      "fee": "-0.0359316",
+      "ts": "1771599755256"
+    }
+  ],
+  "httpCode": "200",
+  "msg": "success",
+  "requestTime": 1771772899615
+}

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.time.Instant;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -43,20 +44,22 @@ public class BitgetApi implements InitializingBean {
                 .build();
     }
 
-    public void taxSpotRecord(Instant startTime, Instant endTime) throws IOException {
+    public ResponseResult<List> taxSpotRecord(Instant startTime, Instant endTime) throws IOException {
         Map<String, String> paramMap = new HashMap<>();
         paramMap.put("startTime", startTime.getEpochSecond() + "000");
         paramMap.put("endTime", endTime.getEpochSecond() + "000");
         ResponseResult response = client.bitget().v2().request().get("/api/v2/tax/spot-record", paramMap);
         log.info("Spot Transaction Records between {}  and {}:\n{}", startTime, endTime, render(response));
+        return response;
     }
 
-    public void taxFutureRecord(Instant startTime, Instant endTime) throws IOException {
+    public ResponseResult<List> taxFutureRecord(Instant startTime, Instant endTime) throws IOException {
         Map<String, String> paramMap = new HashMap<>();
         paramMap.put("startTime", startTime.getEpochSecond() + "000");
         paramMap.put("endTime", endTime.getEpochSecond() + "000");
         ResponseResult response = client.bitget().v2().request().get("/api/v2/tax/future-record", paramMap);
         log.info("Future Transaction Records between {}  and {}:\n{}", startTime, endTime, render(response));
+        return response;
     }
 
     @NotNull
