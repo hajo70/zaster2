@@ -13,7 +13,7 @@ public interface BitgetTaxFutureRecordMapper {
 
     BitgetTaxFutureRecordEntity toEntity(Map<String, String> map);
 
-    // Custom conversion method
+    // String (epoch millis) → LocalDateTime in UTC
     default LocalDateTime map(String value) {
         if (value == null) {
             return null;

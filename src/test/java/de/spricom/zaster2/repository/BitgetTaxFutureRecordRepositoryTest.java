@@ -43,4 +43,10 @@ class BitgetTaxFutureRecordRepositoryTest {
         BitgetTaxFutureRecordEntity saved = repository.save(entity);
         System.out.println(saved);
     }
+
+    @Test
+    void show_minId() {
+        Long minId = repository.getMinId();
+        System.out.println(minId);
+    }
 }

@@ -1,0 +1,18 @@
+{
+  "code": "00000",
+  "data": [
+    {
+      "id": "1407386901673619456",
+      "coin": "XRP",
+      "spotTaxType": "Withdrawal",
+      "amount": "-899.8",
+      "fee": "-0.2",
+      "balance": "200.000000008",
+      "ts": "1771273106008",
+      "bizOrderId": "1407386306736173056"
+    }
+  ],
+  "httpCode": "200",
+  "msg": "success",
+  "requestTime": 1771778481858
+}
