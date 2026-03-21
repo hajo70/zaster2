@@ -1,0 +1,22 @@
+== Reading CSV
+
+=== Libaries
+
+.OpenCSV
+* https://www.baeldung.com/opencsv
+----
+<dependency>
+    <groupId>com.opencsv</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>5.10</version>
+</dependency>
+----
+
+.Apache Commons CSV
+----
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.10.0</version>
+</dependency>
+----
