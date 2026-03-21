@@ -75,7 +75,7 @@ public class PostbankGrioImporter {
 
   private void importPostbankGiroCsvFile(File file) {
     try (FileInputStream fis = new FileInputStream(file)) {
-      importService.importCsv(file.getName(), fis);
+      importService.importCsv(file.getCanonicalPath(), fis);
     } catch (IOException ex) {
       log.error("Cannot import {}", file, ex);
     }

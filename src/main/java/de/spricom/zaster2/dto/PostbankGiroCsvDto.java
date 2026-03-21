@@ -1,6 +1,7 @@
 package de.spricom.zaster2.dto;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvDate;
 import com.opencsv.bean.CsvNumber;
 import lombok.Getter;
@@ -47,12 +48,10 @@ public class PostbankGiroCsvDto {
     @CsvBindByName(column = "Gläubiger ID")
     private String creditorId;
 
-    @CsvBindByName(column = "Fremde Gebühren")
-    @CsvNumber("#,##")
+    @CsvCustomBindByName(column = "Fremde Gebühren", converter = GermanBigDecimalConverter.class)
     private BigDecimal foreignFees;
 
-    @CsvBindByName(column = "Betrag")
-    @CsvNumber("#,##")
+    @CsvCustomBindByName(column = "Betrag", converter = GermanBigDecimalConverter.class)
     private BigDecimal amount;
 
     @CsvBindByName(column = "Abweichender Empfänger")
