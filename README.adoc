@@ -13,3 +13,15 @@ GRANT ALL PRIVILEGES ON zaster2.* TO 'bot'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 SHOW GRANTS FOR bot@localhost;
 ----
+
+== Export database
+
+----
+mysqldump -u bot -p --single-transaction --quick --routines --triggers --events zaster2 | gzip -c > zaster2.sql.gz
+----
+
+== Import database
+
+----
+gunzip -c zaster2.sql.gz | mysql -u bot -p zaster2
+----

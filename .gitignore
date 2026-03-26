@@ -1,5 +1,6 @@
 ### Specific to this project ###
 /application.properties
+/zaster2.sql.gz
 
 ### Maven ###
 target/
