@@ -16,7 +16,6 @@ public interface PostbankGiroRepository extends JpaRepository<PostbankGiroEntity
             AND (e.transactionType = :#{#booking.transactionType} OR (e.transactionType IS NULL AND :#{#booking.transactionType} IS NULL))
             AND (e.partnerName = :#{#booking.partnerName} OR (e.partnerName IS NULL AND :#{#booking.partnerName} IS NULL))
             AND (e.paymentReference = :#{#booking.paymentReference} OR (e.paymentReference IS NULL AND :#{#booking.paymentReference} IS NULL))
-            AND (e.iban = :#{#booking.iban} OR (e.iban IS NULL AND :#{#booking.iban} IS NULL))
             AND (e.bic = :#{#booking.bic} OR (e.bic IS NULL AND :#{#booking.bic} IS NULL))
             AND (e.customerReference = :#{#booking.customerReference} OR (e.customerReference IS NULL AND :#{#booking.customerReference} IS NULL))
             AND (e.mandateReference = :#{#booking.mandateReference} OR (e.mandateReference IS NULL AND :#{#booking.mandateReference} IS NULL))

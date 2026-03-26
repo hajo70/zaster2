@@ -3,7 +3,6 @@ package de.spricom.zaster2.dto;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvDate;
-import com.opencsv.bean.CsvNumber;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

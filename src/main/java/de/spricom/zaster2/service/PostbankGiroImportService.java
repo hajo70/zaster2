@@ -2,7 +2,6 @@ package de.spricom.zaster2.service;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.opencsv.bean.BeanVerifier;
 import de.spricom.zaster2.dto.PostbankGiroCsvDto;
 import de.spricom.zaster2.entities.FileImportHistoryEntity;
 import de.spricom.zaster2.entities.PostbankGiroEntity;
@@ -15,10 +14,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -47,7 +46,10 @@ public class PostbankGiroImportService {
         history.setMd5(md5);
         history = fileImportHistoryRepository.save(history);
 
-        try (InputStreamReader reader = new InputStreamReader(new ByteArrayInputStream(content), StandardCharsets.UTF_8)) {
+        String csv = new String(content, StandardCharsets.UTF_8);
+        csv = csv.replace(";Verwendungszweck;IBAN;BIC;", ";Verwendungszweck;IBAN / Kontonummer;BIC;");
+
+        try (Reader reader = new StringReader(csv)) {
             CsvToBean<PostbankGiroCsvDto> csvToBean = new CsvToBeanBuilder<PostbankGiroCsvDto>(reader)
                     .withType(PostbankGiroCsvDto.class)
                     .withSeparator(';')

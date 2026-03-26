@@ -3,7 +3,6 @@ package de.spricom.zaster2.tool;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import de.spricom.zaster2.dto.PostbankGiroCsvDto;
-import de.spricom.zaster2.repository.BitgetTaxFutureRecordRepository;
 import de.spricom.zaster2.service.PostbankGiroImportService;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
