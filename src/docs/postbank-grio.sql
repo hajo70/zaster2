@@ -32,7 +32,6 @@ where amount > 0
 order by bookingDate desc
 limit 1000;
 
-
 -- duplicates
 select * from postbank_giro
 where id in (select pg1.id
@@ -41,5 +40,18 @@ where id in (select pg1.id
              where pg1.id != pg2.id
                and pg1.bookingDate = pg2.bookingDate
                and pg1.amount = pg2.amount)
-order by bookingDate, amount
+order by bookingDate, amount;
 
+-- classification
+
+select
+    bookingDate,
+    amount,
+    partnerName,
+    paymentReference,
+    transactionType,
+    mandateReference,
+    deviatingRecipient,
+    iban
+from postbank_giro p where not exists
+    (select 1 from postbank_giro_classification c where p.id = c.postbank_giro_id)

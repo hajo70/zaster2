@@ -31,6 +31,7 @@ public class GiroClassificationService {
                 var classification = getOrCreateClassification(classifier);
                 classification.getPostbankBookings().add(entity);
                 classificationRepository.save(classification);
+                return;
             }
         }
     }
