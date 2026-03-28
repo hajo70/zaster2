@@ -13,3 +13,4 @@ select * from bitget_tax_spot_record where spotTaxType = 'fiat_recharge_in'
 select * from bitget_tax_spot_record where spotTaxType like 'Transfer%' order by ts
 
 select * from bitget_tax_spot_record where spotTaxType like 'Exchange%'
+
