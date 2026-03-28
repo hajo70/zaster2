@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface PostbankGiroRepository extends JpaRepository<PostbankGiroEntity, Long> {
 
@@ -26,4 +28,14 @@ public interface PostbankGiroRepository extends JpaRepository<PostbankGiroEntity
             AND (e.currency = :#{#booking.currency} OR (e.currency IS NULL AND :#{#booking.currency} IS NULL))
             """)
     boolean existsByContent(@Param("booking") PostbankGiroEntity booking);
+    
+    @Query("""
+            SELECT e FROM PostbankGiroEntity e
+            WHERE NOT EXISTS (
+                SELECT 1 FROM GiroClassificationEntity gc
+                JOIN gc.postbankBookings pb
+                WHERE pb = e
+            )
+            """)
+    List<PostbankGiroEntity> findAllUnclassified();
 }

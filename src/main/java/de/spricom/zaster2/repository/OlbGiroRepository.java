@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface OlbGiroRepository extends JpaRepository<OlbGiroEntity, Long> {
 
@@ -27,4 +29,14 @@ public interface OlbGiroRepository extends JpaRepository<OlbGiroEntity, Long> {
             AND (e.currency = :#{#booking.currency} OR (e.currency IS NULL AND :#{#booking.currency} IS NULL))
             """)
     boolean existsByContent(@Param("booking") OlbGiroEntity booking);
+
+    @Query("""
+            SELECT e FROM OlbGiroEntity e
+            WHERE NOT EXISTS (
+                SELECT 1 FROM GiroClassificationEntity gc
+                JOIN gc.olbBookings pb
+                WHERE pb = e
+            )
+            """)
+    List<OlbGiroEntity> findAllUnclassified();
 }
