@@ -23,6 +23,7 @@ public class GiroClassificationEntity {
     private String name;
 
     @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "varchar(64)")
     private ClassificationCategory category;
 
     @OneToMany
