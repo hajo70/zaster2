@@ -18,6 +18,6 @@ public class BitpandaClassifier implements PostbankClassifier {
 
     @Override
     public boolean matches(PostbankGiroEntity entity) {
-        return entity.getPartnerName().equals("Bitpanda Payments GmbH");
+        return entity.getPartnerName().startsWith("Bitpanda");
     }
 }
