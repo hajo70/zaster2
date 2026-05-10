@@ -10,7 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Entity
 @Table(name = "bitget_tax_future_record")
@@ -31,7 +31,7 @@ public class BitgetTaxFutureRecordEntity {
     @Column(precision = 16, scale = 10)
     private BigDecimal fee;
     @Column(columnDefinition = "DATETIME(0)", nullable = false)
-    private LocalDateTime ts;
+    private Instant ts;
 
     public int hashCode() {
         return id != null ? id.hashCode() : super.hashCode();
