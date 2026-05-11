@@ -87,9 +87,36 @@ public class BitgetApiImportService {
         return Instant.now().minus(91, ChronoUnit.DAYS);
     }
 
-    public void importCurrentTaxFutureRecords() throws IOException {
-        ResponseResult<List> result = api.taxFutureRecord(Instant.now().minus(30, ChronoUnit.DAYS), Instant.now());
-        saveTaxFutureRecords(result);
+    public void importLatestTaxFutureRecords() throws IOException {
+        Instant startTime = taxFutureRecordRepository.findMaxTimestamp();
+        log.info("importing tax future records from {}", startTime);
+        boolean done = false;
+        for(int i = 0; i < 100 && !done; i++) {
+            Instant endTime = startTime.plus(10, ChronoUnit.DAYS);
+            if (endTime.isAfter(Instant.now())) {
+                done = true;
+                endTime = Instant.now();
+            }
+            ResponseResult<List> result = api.taxFutureRecord(startTime, endTime);
+            saveTaxFutureRecords(result);
+            startTime = endTime;
+        }
+    }
+
+    public void importLatestTaxSpotRecords() throws IOException {
+        Instant startTime = taxSpotRecordRepository.findMaxTimestamp();
+        log.info("importing tax spot records from {}", startTime);
+        boolean done = false;
+        for(int i = 0; i < 100 && !done; i++) {
+            Instant endTime = startTime.plus(10, ChronoUnit.DAYS);
+            if (endTime.isAfter(Instant.now())) {
+                done = true;
+                endTime = Instant.now();
+            }
+            ResponseResult<List> result = api.taxSpotRecord(startTime, endTime);
+            saveTaxSpotRecords(result);
+            startTime = endTime;
+        }
     }
 
     private void saveFutureOrders(List<?> resultList) {
@@ -127,5 +154,4 @@ public class BitgetApiImportService {
             log.info("saved {}", saved);
         }
     }
-
 }
