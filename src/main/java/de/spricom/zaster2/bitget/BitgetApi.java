@@ -59,6 +59,22 @@ public class BitgetApi implements InitializingBean {
         return result;
     }
 
+    public ResponseResult<Map> getHistoryPosition(Instant startTime, Long idLessThan) throws IOException {
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put("productType", "usdt-futures");
+        if (startTime != null) {
+            paramMap.put("startTime", Long.toString(startTime.toEpochMilli()));
+        }
+        if (idLessThan != null) {
+            paramMap.put("idLessThan", idLessThan.toString());
+        }
+        paramMap.put("limit", "10");
+        log.info("get position history {}", paramMap);
+        ResponseResult<Map> result = client.bitget().v2().request().get("/api/v2/mix/position/history-position", paramMap);
+        log.debug("get position history result {}", render(result));
+        return result;
+    }
+
     public ResponseResult<List> taxSpotRecord(Instant startTime, Instant endTime) throws IOException {
         Map<String, String> paramMap = new HashMap<>();
         paramMap.put("startTime", startTime.getEpochSecond() + "000");

@@ -48,6 +48,17 @@ public class BitgetTaxDataImporter {
     @Test
     void updateAll() throws IOException {
         service.importLatestOrders();
+        service.importLatestPositions();
+    }
+
+    @Test
+    void importLatestOrders() throws IOException {
+        service.importLatestOrders();
+    }
+
+    @Test
+    void importLatestPositions() throws IOException {
+        service.importLatestPositions();
     }
 
     @Test

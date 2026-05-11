@@ -60,6 +60,26 @@ public class BitgetApiImportService {
         }
     }
 
+    public void importLatestPositions() throws IOException {
+        Instant startTime = withinLast90Days(futurePositionRepository.findMaxUpdatedAt());
+        log.info("importing positions from {}", startTime);
+        Long endId = null;
+        for(int i = 0; i < 100; i++) {
+            ResponseResult<Map> result = api.getHistoryPosition(startTime, endId);
+            String endIdString = (String) result.getData().get("endId");
+            if (endIdString == null || endIdString.isBlank()) {
+                break;
+            }
+            endId = Long.parseLong(endIdString);
+            List<?> list = (List<?>) result.getData().get("list");
+            if (list.isEmpty()) {
+                break;
+            }
+            log.info("got {} history orders, endId: {}", list.size(), endId);
+            saveFuturePositions(list);
+        }
+    }
+
     private Instant withinLast90Days(Instant utime) {
         if (utime != null) {
             return utime;
@@ -81,8 +101,8 @@ public class BitgetApiImportService {
         }
     }
 
-    private void saveFuturePositions(ResponseResult<List> result) {
-        for (Object json : result.getData()) {
+    private void saveFuturePositions(List<?> resultList) {
+        for (Object json : resultList) {
             Map<String, String> data = (Map<String, String>) json;
             BitgetFuturePositionEntity entity = futurePositionMapper.toEntity(data);
             BitgetFuturePositionEntity saved = futurePositionRepository.save(entity);
