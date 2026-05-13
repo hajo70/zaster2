@@ -35,13 +35,24 @@ order by createdAt desc
 limit 100;
 
 -- stats
-select symbol, count(*), sum(fee), sum(totalProfits)
-from bitget_future_order
-where createdAt > now() - interval 7 day
-group by symbol;
-
-select symbol, date(updatedAt), count(*), sum(fee), sum(totalProfits)
+select symbol, count(*), sum(fee), sum(totalProfits + fee)
 from bitget_future_order
 where createdAt > now() - interval 30 day
+group by symbol;
+
+select symbol, date(updatedAt), count(*), sum(fee), sum(totalProfits + fee)
+from bitget_future_order
+where createdAt > now() - interval 7 day
 group by symbol, date(updatedAt)
 order by symbol, date(updatedAt) desc;
+
+-- adhoc
+select *
+from bitget_future_order
+where createdAt > now() - interval 7 day
+and symbol = 'DOGEUSDT';
+
+select *
+from bitget_future_position
+where createdAt > now() - interval 7 day
+  and symbol = 'DOGEUSDT';
