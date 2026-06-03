@@ -37,6 +37,12 @@ limit 100;
 -- stats
 select symbol, count(*), sum(fee), sum(totalProfits + fee)
 from bitget_future_order
+where createdAt >= '2026-01-01'
+group by symbol
+order by sum(totalProfits + fee) desc;
+
+select symbol, count(*), sum(fee), sum(totalProfits + fee)
+from bitget_future_order
 where createdAt > now() - interval 30 day
 group by symbol;
 
