@@ -1,4 +1,11 @@
 select count(distinct fileImportHistory_id) from postbank_giro;
+
+-- show source
+select fi.filename, count(*) from postbank_giro pg
+join file_import_history fi on pg.fileImportHistory_id = fi.id
+group by fi.filename
+order by `count(*)` desc;
+
 select count(*) from postbank_giro;
 
 select * from postbank_giro

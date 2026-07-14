@@ -33,6 +33,9 @@ public class PostbankGrioImporter {
       new File(
           "/media/hjhessmann/4C05-B576/work/privat/2023/Konto/Postbank-Konto/Kontoumsaetze_210_5140645_00_20230609_123439.csv");
 
+  private static final File MAC_DIR =
+          new File("/Users/hajo/Desktop/Konto/Postbank/Kontoumsätze");
+
   @Autowired private PostbankGiroImportService importService;
 
   @Test
@@ -61,6 +64,11 @@ public class PostbankGrioImporter {
   @Test
   void importCurrentPostbankGiroCsvFiles() {
     importPostbankGiroCsvFiles(CURRENT_DIR);
+  }
+
+  @Test
+  void importPostbankGiroCsvFilesMac() {
+    importPostbankGiroCsvFiles(MAC_DIR);
   }
 
   private void importPostbankGiroCsvFiles(File dir) {
