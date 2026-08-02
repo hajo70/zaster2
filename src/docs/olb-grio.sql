@@ -1,13 +1,12 @@
-select count(distinct fileImportHistory_id) from olb_giro;
-select count(*) from olb_giro;
-
+-- latest 100 transactions
 select * from olb_giro
          order by bookingDate desc
 limit 100;
 
-select distinct fileImportHistory_id from olb_giro;
-truncate olb_giro;
-delete from file_import_history where id = 102;
+-- imported files
+select f.filename, count(*) as count from olb_giro g
+         join file_import_history f on g.fileImportHistory_id = f.id
+group by f.filename
 
 select
     bookingDate,

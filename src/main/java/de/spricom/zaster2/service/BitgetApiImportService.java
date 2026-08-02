@@ -100,6 +100,7 @@ public class BitgetApiImportService {
             ResponseResult<List> result = api.taxFutureRecord(startTime, endTime);
             saveTaxFutureRecords(result);
             startTime = endTime;
+            throdle(1000);
         }
     }
 
@@ -152,6 +153,14 @@ public class BitgetApiImportService {
             BitgetTaxSpotRecordEntity entity = taxSpotRecordMapper.toEntity(data);
             BitgetTaxSpotRecordEntity saved = taxSpotRecordRepository.save(entity);
             log.info("saved {}", saved);
+        }
+    }
+
+    private void throdle(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 }

@@ -21,6 +21,12 @@ where enterPointSource = 'api'
 order by createdAt desc
 limit 100;
 
+select updatedAt, symbol, side, enterPointSource, size, posAvg, priceAvg, totalProfits, fee, presetStopLossPrice, price
+from bitget_future_order
+where enterPointSource = 'api' and symbol = 'HYPEUSDT'
+order by createdAt
+limit 100;
+
 -- other oder details
 select updatedAt, symbol, side, tradeSide, enterPointSource, size, posAvg, priceAvg, totalProfits, fee, presetStopLossPrice, price
 from bitget_future_order
