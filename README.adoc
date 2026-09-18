@@ -25,3 +25,19 @@ mysqldump -u bot -p --single-transaction --quick --routines --triggers --events 
 ----
 gunzip -c zaster2.sql.gz | mysql -u bot -p zaster2
 ----
+
+== Import to separate database
+
+----
+sudo mysql -u root
+CREATE DATABASE zaster2imp;
+SHOW DATABASES;
+
+GRANT ALL PRIVILEGES ON zaster2imp.* TO 'bot'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR bot@localhost;
+EXIT;
+
+cp /Volumes/FRITZ.NAS/General-FlashDisk3-0-01/Austausch/zaster2.sql.gz .
+gunzip -c zaster2.sql.gz | mysql -u bot -p zaster2imp
+----
