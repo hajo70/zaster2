@@ -1,0 +1,16 @@
+@import url('main-layout.css');
+
+.simulator-results {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.simulator-results-col1 {
+    text-align: right;
+}
+
+html {
+    --lumo-text-field-size: var(--lumo-size-s);
+}
