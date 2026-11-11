@@ -1,19 +1,17 @@
 package de.spricom.zaster2.okx.service;
 
 import de.spricom.zaster2.okx.OkxProperties;
-import de.spricom.zaster2.okx.model.OkxFill;
-import de.spricom.zaster2.okx.model.OkxResponse;
-import de.spricom.zaster2.okx.model.OkxServerTime;
+import de.spricom.zaster2.okx.model.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.ResolvableType;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-import tools.jackson.core.JacksonException;
 import tools.jackson.databind.ObjectMapper;
 
-import java.util.Map;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -61,7 +59,8 @@ public class OkxApiClient {
         if (limit != null && !limit.isBlank()) {
             path += "&limit=" + limit;
         }
-        return executeGet(path, new ParameterizedTypeReference<OkxResponse<OkxFill>>() {});
+        return executeGet(path, new ParameterizedTypeReference<OkxResponse<OkxFill>>() {
+        });
     }
 
     /**
@@ -70,6 +69,19 @@ public class OkxApiClient {
      */
     public OkxResponse<OkxFill> getFillsHistory(String instType) {
         return getFillsHistory(instType, null, null);
+    }
+
+    /**
+     * Retrieve bill details for the last 3 months.
+     * Endpoint: GET /api/v5/account/bills-archive
+     *
+     * @param request query parameters for filtering bills
+     * @return list of bill details data, or empty list if none
+     */
+    public List<BillDetailsData> getBillsDetails(BillDetailsRequest request) {
+        String queryString = (request != null) ? request.toQueryString() : "";
+        String path = "/api/v5/account/bills-archive" + queryString;
+        return executeGetData(path, BillDetailsData.class);
     }
 
     /**
@@ -83,7 +95,8 @@ public class OkxApiClient {
                 .uri(path)
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .body(new ParameterizedTypeReference<OkxResponse<OkxServerTime>>() {});
+                .body(new ParameterizedTypeReference<OkxResponse<OkxServerTime>>() {
+                });
     }
 
     /**
@@ -98,6 +111,21 @@ public class OkxApiClient {
             }
         }
         throw new IllegalStateException("Failed to retrieve server timestamp from OKX API: " + response);
+    }
+
+    public <T> List<T> executeGetData(String requestPath, Class<T> dataClass) {
+        // Dynamically build ParameterizedTypeReference<OkxResponse<T>> using ResolvableType
+        ParameterizedTypeReference<OkxResponse<T>> typeReference =
+                (ParameterizedTypeReference<OkxResponse<T>>) (ParameterizedTypeReference<?>)
+                        ParameterizedTypeReference.forType(
+                                ResolvableType.forClassWithGenerics(OkxResponse.class, dataClass).getType()
+                        );
+        OkxResponse<T> response = executeGet(requestPath, typeReference);
+        if (response != null && response.isSuccess() && response.getData() != null) {
+            return response.getData();
+        } else {
+            throw new OkxApiException("GET", requestPath, response);
+        }
     }
 
     /**
