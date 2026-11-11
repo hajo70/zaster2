@@ -12,11 +12,11 @@ import java.math.BigDecimal;
 import java.time.Instant;
 
 @Entity
-@Table(name = "okx_bill")
+@Table(name = "okx_bill_details")
 @Getter
 @Setter
 @ToString
-public class OkxBillEntity {
+public class OkxBillDetailsEntity {
 
     @Id
     private Long billId;
@@ -130,7 +130,7 @@ public class OkxBillEntity {
             return false;
         }
 
-        OkxBillEntity that = (OkxBillEntity) other;
+        OkxBillDetailsEntity that = (OkxBillDetailsEntity) other;
         if (billId != null) {
             return billId.equals(that.billId);
         }

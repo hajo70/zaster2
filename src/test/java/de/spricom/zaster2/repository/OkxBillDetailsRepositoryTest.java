@@ -9,10 +9,10 @@ import java.time.Instant;
 
 @SpringBootTest
 @Disabled("manual")
-class OkxBillRepositoryTest {
+class OkxBillDetailsRepositoryTest {
 
     @Autowired
-    private OkxBillRepository repository;
+    private OkxBillDetailsRepository repository;
 
     @Test
     void show_maxValues() {

@@ -35,43 +35,6 @@ public class OkxApiClient {
     }
 
     /**
-     * Retrieve recently filled trade details for the last three months.
-     * Endpoint: GET /api/v5/trade/fills-history
-     *
-     * @param instType instrument type, e.g. SPOT, MARGIN, SWAP, FUTURES, OPTION (required by OKX)
-     * @param instId   instrument ID; all instruments of the given type if {@code null} or blank
-     */
-    public OkxResponse<OkxFill> getFillsHistory(String instType, String instId) {
-        return getFillsHistory(instType, instId, null);
-    }
-
-    /**
-     * Retrieve recently filled trade details for the last three months.
-     * Endpoint: GET /api/v5/trade/fills-history
-     *
-     * @param limit maximum number of results, 1-100 (OKX default: 100)
-     */
-    public OkxResponse<OkxFill> getFillsHistory(String instType, String instId, String limit) {
-        String path = "/api/v5/trade/fills-history?instType=" + instType;
-        if (instId != null && !instId.isBlank()) {
-            path += "&instId=" + instId;
-        }
-        if (limit != null && !limit.isBlank()) {
-            path += "&limit=" + limit;
-        }
-        return executeGet(path, new ParameterizedTypeReference<OkxResponse<OkxFill>>() {
-        });
-    }
-
-    /**
-     * Retrieve recently filled trade details for all instruments of the given type.
-     * Endpoint: GET /api/v5/trade/fills-history
-     */
-    public OkxResponse<OkxFill> getFillsHistory(String instType) {
-        return getFillsHistory(instType, null, null);
-    }
-
-    /**
      * Retrieve bill details for the last 3 months.
      * Endpoint: GET /api/v5/account/bills-archive
      *

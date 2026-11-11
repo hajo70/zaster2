@@ -1,8 +1,7 @@
 package de.spricom.zaster2.mapper;
 
-import de.spricom.zaster2.entities.OkxBillEntity;
+import de.spricom.zaster2.entities.OkxBillDetailsEntity;
 import de.spricom.zaster2.okx.model.BillDetailsData;
-import de.spricom.zaster2.okx.model.OkxBillData;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,22 +9,20 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @ActiveProfiles("test")
-public class OkxBillMapperTest {
+public class OkxBillDetailsMapperTest {
 
     @Autowired
-    private OkxBillMapper mapper;
+    private OkxBillDetailsMapper mapper;
 
     @Test
-    void testMapOkxBillDataSample1() {
-        OkxBillData data = new OkxBillData();
+    void testMapBillDetailsDataSample1() {
+        BillDetailsData data = new BillDetailsData();
         data.setBillId("4051013181533589506");
         data.setCcy("USDC");
         data.setBal("81.7712695459343799");
@@ -61,7 +58,7 @@ public class OkxBillMapperTest {
         data.setTs("1793232000832");
         data.setType("8");
 
-        OkxBillEntity entity = mapper.toEntity(data);
+        OkxBillDetailsEntity entity = mapper.toEntity(data);
 
         assertThat(entity).isNotNull();
         assertThat(entity.getBillId()).isEqualTo(4051013181533589506L);
@@ -101,8 +98,8 @@ public class OkxBillMapperTest {
     }
 
     @Test
-    void testMapOkxBillDataSample2() {
-        OkxBillData data = new OkxBillData();
+    void testBillDetailsDataSample2() {
+        BillDetailsData data = new BillDetailsData();
         data.setBillId("4051013172775882800");
         data.setCcy("USDC");
         data.setBal("81.7712695459343799");
@@ -123,7 +120,7 @@ public class OkxBillMapperTest {
         data.setTs("1793232000571");
         data.setType("8");
 
-        OkxBillEntity entity = mapper.toEntity(data);
+        OkxBillDetailsEntity entity = mapper.toEntity(data);
 
         assertThat(entity).isNotNull();
         assertThat(entity.getBillId()).isEqualTo(4051013172775882800L);
@@ -135,7 +132,7 @@ public class OkxBillMapperTest {
     }
 
     @Test
-    void testMapBillDetailsData() {
+    void testMapBillDetailsDataSample3() {
         BillDetailsData details = new BillDetailsData();
         details.setBillId("4050529984391680002");
         details.setCcy("USDC");
@@ -150,7 +147,7 @@ public class OkxBillMapperTest {
         details.setSubType("173");
         details.setType("8");
 
-        OkxBillEntity entity = mapper.toEntity(details);
+        OkxBillDetailsEntity entity = mapper.toEntity(details);
 
         assertThat(entity).isNotNull();
         assertThat(entity.getBillId()).isEqualTo(4050529984391680002L);
@@ -161,7 +158,7 @@ public class OkxBillMapperTest {
 
     @Test
     void testMapEmptyFieldsToNull() {
-        OkxBillData data = new OkxBillData();
+        BillDetailsData data = new BillDetailsData();
         data.setBillId("12345");
         data.setBal("");
         data.setBalChg("");
@@ -185,7 +182,7 @@ public class OkxBillMapperTest {
         data.setTradeId("");
         data.setTs("");
 
-        OkxBillEntity entity = mapper.toEntity(data);
+        OkxBillDetailsEntity entity = mapper.toEntity(data);
 
         assertThat(entity.getBillId()).isEqualTo(12345L);
         assertThat(entity.getBal()).isNull();
@@ -213,36 +210,10 @@ public class OkxBillMapperTest {
 
     @Test
     void testMapList() {
-        OkxBillData data = new OkxBillData();
-        data.setBillId("2001");
-        List<OkxBillEntity> entities = mapper.toEntities(List.of(data));
-        assertThat(entities).hasSize(1);
-        assertThat(entities.getFirst().getBillId()).isEqualTo(2001L);
-
         BillDetailsData details = new BillDetailsData();
         details.setBillId("2002");
-        List<OkxBillEntity> detailsEntities = mapper.toEntitiesFromDetails(List.of(details));
+        List<OkxBillDetailsEntity> detailsEntities = mapper.toEntities(List.of(details));
         assertThat(detailsEntities).hasSize(1);
         assertThat(detailsEntities.getFirst().getBillId()).isEqualTo(2002L);
-    }
-
-    @Test
-    void testMapFromMap() {
-        Map<String, String> data = new HashMap<>();
-        data.put("billId", "8888");
-        data.put("bal", "100.5");
-        data.put("instId", "BTC-USDC");
-        data.put("ts", "1793232000832");
-        data.put("type", "8");
-        data.put("subType", "173");
-
-        OkxBillEntity entity = mapper.toEntity(data);
-
-        assertThat(entity.getBillId()).isEqualTo(8888L);
-        assertThat(entity.getBal()).isEqualByComparingTo(new BigDecimal("100.5"));
-        assertThat(entity.getInstId()).isEqualTo("BTC-USDC");
-        assertThat(entity.getTs()).isEqualTo(Instant.ofEpochMilli(1793232000832L));
-        assertThat(entity.getType()).isEqualTo("8");
-        assertThat(entity.getSubType()).isEqualTo("173");
     }
 }
